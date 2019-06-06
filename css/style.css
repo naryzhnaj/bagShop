@@ -147,7 +147,6 @@ img {
 .top-menu {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .gender-menu {
@@ -155,27 +154,46 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  margin-top: 40px;
+  margin-right: 255px;
   width: 250px;
   padding: 0;
 }
 
 .gender-menu a {
+  position: relative;
   color: #999;
   font-size: 18px;
   line-height: 36px;
 }
 
 .gender-menu a:hover,
+.gender-menu a:focus,
 .gender-menu a:active {
   color: #22222e;
+}
+
+.gender-menu a:active .gender-menu a::after {
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  display: block;
+  content: '';
+  width: 29px;
+  height: 1px;
+  border: 1px solid #ad9c8c;
+}
+
+.gender-menu a:active .catalog {
+  display: flex;
 }
 
 .user-menu {
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  width: 90px;
+  width: 99px;
   margin: 0;
+  margin-top: 44px;
   margin-left: 404px;
   padding: 0;
 }
@@ -184,11 +202,11 @@ img {
   display: block;
   width: 20px;
   outline: none;
-  cursor: pointer;
 }
 
 .search {
   height: 20px;
+  margin-right: 48px;
   background: url('../img/search.png') 0 0 no-repeat;
 }
 
@@ -217,10 +235,12 @@ img {
 }
 
 .catalog {
+  /*display: none;*/
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   position: absolute;
-  top: 150px;
+  top: 120px;
   width: 100%;
   height: 330px;
   box-shadow: 0 5px 5px rgba(3, 5, 7, 0.1);
@@ -235,6 +255,8 @@ img {
   color: #22222e;
   text-transform: uppercase;
   padding: 20px 0;
+  margin: 0;
+  margin-bottom: 16px;
   border-top: solid 1px #eee;
   border-bottom: solid 1px #eee;
 }
@@ -245,22 +267,7 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   height: 230px;
-  margin-top: 20px;
-}
-
-.categories-list {
-  width: 305px; 
-}
-
-.categories-list li {
-  margin-right: 90px;
-}
-
-.brends-list {
-  width: 830px;
-  border-left: solid 2px #eee;
-  margin-left: 45px;
-  justify-content: space-between;
+  padding: 0;
 }
 
 .catalog a {
@@ -272,6 +279,22 @@ img {
 
 .catalog a:hover {
   opacity: 1;
+}
+
+.categories-list {
+  width: 313px;
+  margin-left: 27px;
+  margin-right: 45px;
+  box-sizing: border-box;
+  border-right: solid 2px #eee;
+}
+
+.categories-list li {
+  margin-right: 97px;
+}
+
+.categories-list a {
+  font-size: 16px;
 }
 
 .cat-1,
@@ -305,7 +328,7 @@ img {
   bottom: 0;
   content: '';
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
 }
 
 .cat-1::before {
@@ -354,6 +377,12 @@ img {
   background-image: url('../img/icon_9.png');
 }
 
+.brends-list {
+  width: 785px;
+  align-content: space-between;
+  text-transform: uppercase;
+}
+
 .category-image {
   position: relative;
   width: 270px;
@@ -367,4 +396,9 @@ img {
   bottom: 0;
   right: 0;
   opacity: 1;
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
 }
