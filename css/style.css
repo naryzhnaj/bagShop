@@ -91,7 +91,8 @@ img {
   outline: none;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   color: #000;
 }
 
@@ -598,7 +599,7 @@ img {
   opacity: 0.8;
   background-color: #fff;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   box-sizing: border-box;
 }
 
@@ -617,4 +618,74 @@ img {
   background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
   width: 772px;
   min-height: 445px;
+}
+
+/*           STOCK          */
+
+.brends {
+  display: flex;
+  align-items: center;
+  width: 1135px;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  margin-left: 20px;
+}
+
+.brends a {
+  opacity: 0.5;
+  outline: none;
+}
+
+.brends a:hover,
+.brends a:focus {
+  opacity: 1;
+}
+
+/*           FOOTER          */
+
+.main-footer {
+  background-color: #f3f3f1;
+  padding-top: 50px;
+}
+
+.main-footer nav {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  font-size: 16px;
+  line-height: 38px;
+  padding-bottom: 40px;
+}
+
+.main-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer a:not(.btn) {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: underline;
+  color: #22222e;
+  opacity: 0.5;
+}
+
+.main-footer a:hover,
+.main-footer a:focus {
+  opacity: 1;
+}
+
+.main-footer .btn {
+  font-size: 14px;
+  margin-bottom: 11px;
+  padding: 8px 19px;
+}
+
+.copyright {
+  background-color: #1c1c2a;
+  color: #6a6a7b;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
 }
