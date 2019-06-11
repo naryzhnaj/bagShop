@@ -105,13 +105,15 @@ img {
   color: #d8c58d;
   letter-spacing: 1.2px;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .entry {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
+  margin: 0;
   margin-bottom: 50px;
 }
 
@@ -537,7 +539,7 @@ img {
 
 .next {
   top: 4px;
-  right: 0;
+  right: -11px;
 }
 
 .slide-number {
@@ -639,6 +641,50 @@ img {
 .brends a:hover,
 .brends a:focus {
   opacity: 1;
+}
+
+/*           REVIEWS          */
+
+.reviews {
+  display: flex;
+  padding: 10px 0;
+  min-height: 295px;
+  margin-bottom: 150px;
+  background-color: #f3f3f1;
+}
+
+.review-item {
+  border-right: solid 1px #ddd;
+  min-height: 295px;
+  width: 390px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 32px 60px;
+  box-sizing: border-box;
+}
+
+.review-item:last-child {
+  border: none;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  color: #ad9c8c;
+  font-family: 'Font Awesome';
+  font-size: 12px;
+  line-height: 48px;
+  margin-left: 78px;
+  margin-bottom: -16px;
+}
+
+.author {
+  font-size: 16px;
+  line-height: 48px;
+  color: #22222e;
 }
 
 /*           FOOTER          */
