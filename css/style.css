@@ -204,7 +204,12 @@ button {
   padding: 0;
 }
 
-.gender-menu a {
+.gender-menu li {
+  position: relative;
+}
+
+.male,
+.female {
   position: relative;
   color: #999;
   font-size: 18px;
@@ -212,15 +217,21 @@ button {
   outline: none;
 }
 
-.gender-menu a:active,
-.gender-menu a:hover,
-.gender-menu a:focus {
+.female:active,
+.female:hover,
+.female:focus,
+.male:active,
+.male:hover,
+.male:focus {
   color: #22222e;
 }
 
-.gender-menu a:active::after,
-.gender-menu a:hover::after,
-.gender-menu a:focus::after {
+.male:active::after,
+.male:hover::after,
+.male:focus::after,
+.female:active::after,
+.female:hover::after,
+.female:focus::after {
   position: absolute;
   bottom: 0;
   left: -10px;
@@ -231,7 +242,7 @@ button {
   background-color: #ad9c8c;
 }
 
-.gender-menu a:active .catalog {
+.gender-menu li:active .catalog {
   display: flex;
 }
 
@@ -287,12 +298,14 @@ button {
 
 .catalog {
   display: none;
-  overflow: hidden;
-  justify-content: space-between;
+  z-index: 9;
   position: absolute;
-  top: 120px;
-  width: 100%;
+  top: 27px;
+  left: 0;
+  padding-top: 50px;
   height: 330px;
+  width: 1170px;
+  background-color: #fff;
   box-shadow: 0 5px 5px rgba(3, 5, 7, 0.1);
 }
 
@@ -444,7 +457,7 @@ button {
 .category-image a {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -12px;
   opacity: 1;
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 15px;
@@ -452,6 +465,10 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.45px;
   outline: none;
+}
+
+.category-image a:hover {
+  font-size: 16px;
 }
 
 /*           SALES          */
