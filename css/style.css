@@ -651,7 +651,7 @@ button {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
-  width: 785px;
+  width: 772px;
   min-height: 445px;
 }
 
@@ -705,6 +705,63 @@ button {
 }
 
 /*           STOCK          */
+
+.closeout {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 118px;
+  width: 1170px;
+}
+
+.closeout li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stock-offer {
+  width: 370px;
+  height: 445px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.stock-offer p {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 24px;
+  line-height: 36px;
+  background-color: #fff;
+  margin: 0;
+  width: 340px;
+  height: 415px;
+}
+
+.closeout li:first-child .stock-offer {
+  background-image: url('../img/sale_layer_1.png');
+}
+
+.closeout li:nth-child(2) .stock-offer {
+  background-image: url('../img/sale_layer_2.png');
+}
+
+.stock-procent {
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #d8c58d;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
 
 .brends {
   display: flex;
