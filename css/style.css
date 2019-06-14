@@ -197,6 +197,7 @@ button {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 0;
   margin-top: 40px;
   margin-right: 255px;
@@ -204,8 +205,8 @@ button {
   padding: 0;
 }
 
-.male:first-child,
-.female:first-child {
+.male:first-child a,
+.female:first-child a {
   position: relative;
   color: #999;
   font-size: 18px;
@@ -604,6 +605,10 @@ button {
   margin-bottom: 30px;
 }
 
+.gallery:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
 .model {
   position: relative;
   width: 385px;
@@ -611,13 +616,18 @@ button {
   background-size: cover;
 }
 
-.label {
+.model img {
   position: absolute;
-  left: 15px;
-  bottom: 15px;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 355px;
   width: 170px;
   min-height: 75px;
-  margin: 0;
   padding: 5px 15px;
   opacity: 0.8;
   background-color: #fff;
@@ -626,10 +636,9 @@ button {
   box-sizing: border-box;
 }
 
-.label h3 {
+.label span {
   font-size: 30px;
   font-weight: 700;
-  margin: 0;
 }
 
 .collection {
