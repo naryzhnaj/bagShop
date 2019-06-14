@@ -204,8 +204,8 @@ button {
   padding: 0;
 }
 
-.male,
-.female {
+.male > a,
+.female > a {
   position: relative;
   color: #999;
   font-size: 18px;
@@ -213,21 +213,17 @@ button {
   outline: none;
 }
 
-.female:active,
-.female:hover,
-.female:focus,
-.male:active,
-.male:hover,
-.male:focus {
+.female:hover > a,
+.female > a:focus,
+.male:hover > a,
+.male > a:focus {
   color: #22222e;
 }
 
-.male:active::after,
-.male:hover::after,
-.male:focus::after,
-.female:active::after,
-.female:hover::after,
-.female:focus::after {
+.male:hover > a::after,
+.male > a:focus::after,
+.female:hover > a::after,
+.female > a:focus::after {
   position: absolute;
   bottom: 0;
   left: -10px;
@@ -238,7 +234,8 @@ button {
   background-color: #ad9c8c;
 }
 
-.gender-menu li:hover .catalog {
+.male:hover .catalog-wrap,
+.female:hover .catalog-wrap {
   display: flex;
 }
 
@@ -292,19 +289,31 @@ button {
   border-radius: 50%;
 }
 
-.catalog {
+.catalog-wrap {
   display: none;
-  z-index: 9;
+  flex-direction: column;
   position: absolute;
   left: 0;
-  padding-top: 50px;
+  z-index: 9;
+  padding-top: 30px;
   height: 330px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 5px rgba(3, 5, 7, 0.1);
 }
 
-.catalog h3 {
+.catalog-header-wrap {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+
+.catalog-header {
+  display: flex;
+}
+
+.catalog-header h3 {
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 15px;
   line-height: 22px;
@@ -313,10 +322,12 @@ button {
   text-transform: uppercase;
   padding: 20px 0;
   margin: 0;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border-top: solid 1px #eee;
-  border-bottom: solid 1px #eee;
+  margin-right: 290px;
+}
+
+.catalog {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .catalog ul {
@@ -597,18 +608,14 @@ button {
   width: 1200px;
 }
 
-.trend li {
+.gallery {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.trend li:first-child .model {
-  background: url('../img/trend_1.jpg') no-repeat 0 0;
-}
-
-.trend li:nth-child(2) .model {
-  background: url('../img/trend_2.jpg') no-repeat 0 0;
+.gallery:nth-child(2n) {
+  flex-direction: row-reverse;
 }
 
 .model {
@@ -618,13 +625,18 @@ button {
   background-size: cover;
 }
 
-.label {
+.model img {
   position: absolute;
-  left: 15px;
-  bottom: 15px;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 355px;
   width: 170px;
   min-height: 75px;
-  margin: 0;
   padding: 5px 15px;
   opacity: 0.8;
   background-color: #fff;
@@ -633,7 +645,7 @@ button {
   box-sizing: border-box;
 }
 
-.label strong {
+.label span {
   font-size: 30px;
   font-weight: 700;
 }
@@ -642,29 +654,30 @@ button {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
   width: 772px;
-  min-height: 445px;
+  min-height: 420px;
 }
 
 .collection li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 390px;
+  align-items: center;
+  padding: 20px;
 }
 
 .buy {
   position: relative;
-  margin-top: 30px;
   height: 55px;
   width: 170px;
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
+  margin-top: 30px;
 }
 
 .sum {
@@ -695,6 +708,11 @@ button {
   color: #22222e;
 }
 
+.buy-hover a:focus,
+.buy-hover a:hover {
+  opacity: 0.8;
+}
+
 .buy-hover .purchase {
   color: #d8c58d;
 }
@@ -712,24 +730,17 @@ button {
   width: 1170px;
 }
 
-.closeout li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.closeout li:first-child .stock-offer {
+.gallery:first-child .stock-offer {
   background-image: url('../img/sale_layer_1.png');
 }
 
-.closeout li:nth-child(2) .stock-offer {
+.gallery:nth-child(2) .stock-offer {
   background-image: url('../img/sale_layer_2.png');
 }
 
 .stock-offer {
   width: 370px;
   height: 445px;
-  padding: 15px;
   box-sizing: border-box;
 }
 
@@ -743,9 +754,15 @@ button {
   font-size: 24px;
   line-height: 36px;
   background-color: #fff;
-  margin: 0;
+  margin: 15px;
   width: 340px;
   height: 415px;
+  opacity: 0.9;
+}
+
+.present {
+  font-size: 46px;
+  line-height: 48px;
 }
 
 .stock-procent {
@@ -798,7 +815,7 @@ button {
   flex-direction: column;
 }
 
-.news-item .date {
+.news-item time {
   font-size: 14px;
   line-height: 30px;
   font-weight: 700;
@@ -903,14 +920,19 @@ button {
   color: #000;
 }
 
-.bonus {
+.bonus-offer {
   position: absolute;
   top: 290px;
   left: 437px;
-  font-size: 24px;
+  width: 200px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.bonus {
+  font-size: 24px;
 }
 
 .bonus-amount {
