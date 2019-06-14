@@ -49,7 +49,6 @@ body {
 }
 
 .container {
-  position: relative;
   width: 1170px;
   margin: 0 auto;
 }
@@ -71,6 +70,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 .slider {
@@ -112,8 +115,9 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 50px;
+  max-width: 450px;
 }
 
 /*           HEADER          */
@@ -200,7 +204,8 @@ img {
   padding: 0;
 }
 
-.gender-menu a {
+.male,
+.female {
   position: relative;
   color: #999;
   font-size: 18px;
@@ -208,15 +213,21 @@ img {
   outline: none;
 }
 
-.gender-menu a:active,
-.gender-menu a:hover,
-.gender-menu a:focus {
+.female:active,
+.female:hover,
+.female:focus,
+.male:active,
+.male:hover,
+.male:focus {
   color: #22222e;
 }
 
-.gender-menu a:active::after,
-.gender-menu a:hover::after,
-.gender-menu a:focus::after {
+.male:active::after,
+.male:hover::after,
+.male:focus::after,
+.female:active::after,
+.female:hover::after,
+.female:focus::after {
   position: absolute;
   bottom: 0;
   left: -10px;
@@ -227,7 +238,7 @@ img {
   background-color: #ad9c8c;
 }
 
-.gender-menu a:active .catalog {
+.gender-menu li:hover .catalog {
   display: flex;
 }
 
@@ -283,12 +294,13 @@ img {
 
 .catalog {
   display: none;
-  overflow: hidden;
-  justify-content: space-between;
+  z-index: 9;
   position: absolute;
-  top: 120px;
-  width: 100%;
+  left: 0;
+  padding-top: 50px;
   height: 330px;
+  width: 100%;
+  background-color: #fff;
   box-shadow: 0 5px 5px rgba(3, 5, 7, 0.1);
 }
 
@@ -440,14 +452,18 @@ img {
 .category-image a {
   position: absolute;
   bottom: 0;
-  right: 0;
-  opacity: 1;
+  right: -12px;
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 15px;
   line-height: 60px;
   text-transform: uppercase;
   letter-spacing: 0.45px;
   outline: none;
+  opacity: 1;
+}
+
+.category-image a:hover {
+  opacity: 0.8;
 }
 
 /*           SALES          */
@@ -537,7 +553,7 @@ img {
 
 .prev:hover,
 .next:hover {
-  font-size: 18px;
+  opacity: 0.8;
 }
 
 .prev {
@@ -566,6 +582,10 @@ img {
 }
 
 /*           NEW COLLECTION          */
+
+.new-season {
+  margin-bottom: 80px;
+}
 
 .trend {
   list-style: none;
@@ -604,7 +624,8 @@ img {
   bottom: 15px;
   width: 170px;
   min-height: 75px;
-  padding: 5px;
+  margin: 0;
+  padding: 5px 15px;
   opacity: 0.8;
   background-color: #fff;
   font-size: 16px;
@@ -629,14 +650,120 @@ img {
   min-height: 445px;
 }
 
+.collection li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 390px;
+}
+
+.buy {
+  position: relative;
+  margin-top: 30px;
+  height: 55px;
+  width: 170px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.sum {
+  font-weight: 400;
+}
+
+.ruble {
+  font-family: 'PTRouble Sans';
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.buy:hover .buy-hover {
+  display: block;
+}
+
+.buy-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  width: 170px;
+  display: none;
+  background-color: #fff;
+}
+
+.buy-hover a {
+  color: #22222e;
+}
+
+.buy-hover .purchase {
+  color: #d8c58d;
+}
+
 /*           STOCK          */
+
+.closeout {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 118px;
+  width: 1170px;
+}
+
+.closeout li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.closeout li:first-child .stock-offer {
+  background-image: url('../img/sale_layer_1.png');
+}
+
+.closeout li:nth-child(2) .stock-offer {
+  background-image: url('../img/sale_layer_2.png');
+}
+
+.stock-offer {
+  width: 370px;
+  height: 445px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.stock-offer p {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 24px;
+  line-height: 36px;
+  background-color: #fff;
+  margin: 0;
+  width: 340px;
+  height: 415px;
+}
+
+.stock-procent {
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #d8c58d;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
 
 .brends {
   display: flex;
   align-items: center;
   width: 1135px;
   justify-content: space-between;
-  margin-bottom: 120px;
+  margin-bottom: 160px;
   margin-left: 20px;
 }
 
@@ -648,6 +775,153 @@ img {
 .brends a:hover,
 .brends a:focus {
   opacity: 1;
+}
+
+/*           NEWS          */
+
+.news {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 60px 70px;
+  background: url('../img/news_layer.png') 0 0 no-repeat;
+}
+
+.news-item {
+  width: 315px;
+  min-height: 550px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item .date {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 11px;
+}
+
+.news-item h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 38px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.news-item p {
+  color: #999;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.news-item a {
+  margin-left: 145px;
+  color: #22222e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  outline: none;
+}
+
+.news-item a:hover,
+.news-item a:focus {
+  opacity: 0.8;
+}
+
+.sub {
+  position: relative;
+  background: url('../img/bonus_layer.jpg') 100% 0 no-repeat;
+  height: 450px;
+  width: 1170px;
+  box-sizing: border-box;
+  padding-top: 103px;
+  margin-bottom: 140px;
+}
+
+.subscribe {
+  width: 390px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.subscribe h3 {
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 48px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.subscribe form {
+  font-size: 16px;
+  line-height: 36px;
+  margin-top: 40px;
+}
+
+.subscribe input {
+  width: 270px;
+  border: solid 1px #f3f3f1;
+  color: #b1b1b1;
+  border-radius: 3px;
+  height: 44px;
+  padding-left: 10px;
+  padding-right: 80px;
+  box-sizing: border-box;
+  background-color: #f3f3f1;
+  outline: none;
+}
+
+.subscribe input:focus,
+.subscribe input:hover {
+  color: #22222e;
+}
+
+.subscribe button {
+  border-radius: 3px;
+  background-color: #d1b785;
+  border: none;
+  color: #5f4f40;
+  padding: 13px 25px;
+  margin-left: -75px;
+  outline: none;
+}
+
+.subscribe button:focus,
+.subscribe button:hover {
+  color: #000;
+}
+
+.bonus {
+  position: absolute;
+  top: 290px;
+  left: 437px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.bonus-amount {
+  position: absolute;
+  top: 180px;
+  right: 360px;
+  font-size: 188px;
+  letter-spacing: 6px;
+  line-height: 45px;
+  opacity: 0.1;
+  font-family: 'Yeseva One', Arial, sans-serif;
 }
 
 /*           REVIEWS          */
@@ -707,7 +981,7 @@ img {
   width: 1000px;
   font-size: 16px;
   line-height: 38px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .main-footer ul {
@@ -741,5 +1015,5 @@ img {
   font-size: 12px;
   line-height: 30px;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
 }
