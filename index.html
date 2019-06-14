@@ -116,6 +116,7 @@
             </section>
           </li>
         </ul>
+
         <img src="img/logo.png" width="163" height="70" alt="Логотип Hoberdini">
         <ul class="user-menu">
           <li><a class="search" href="#" aria-label="поиск по сайту"></a></li>
@@ -149,13 +150,14 @@
       </div>
 
       <section class="new-season">
-          <h2 class="rubric">новинки сезона</h2>
-          <p class="entry">Специально для Вас мы подобрали самые трендовые модели сезона весна-лето 2017</p>
+        <h2 class="rubric">новинки сезона</h2>
+        <p class="entry">Специально для Вас мы подобрали самые трендовые модели сезона весна-лето 2017</p>
         <ul class="trend">
-          <li>
+          <li class="gallery">
             <div class="model">
+              <img src="img/trend_1.jpg" width="385" height="445" alt="trend-1">
               <p class="label">
-                <strong>CHANAIL</strong>
+                <h3>CHANAIL</h3>
                 Новая&nbsp;коллекция
               </p>
             </div>
@@ -196,7 +198,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="gallery">
             <ul class="collection">
               <li>
                 <img src="img/product_4.png" width="227" height="198" alt="trend-4">
@@ -220,7 +222,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="gallery">
                 <img src="img/product_6.png" width="209" height="186" alt="trend-6">
                 <div class="buy">
                   <span>Сумка Forla</span>
@@ -233,8 +235,9 @@
               </li>
             </ul>
             <div class="model">
+              <img src="img/trend_2.jpg" width="385" height="445" alt="trend-2">
               <p class="label">
-                <strong>Forla</strong>
+                <h3>Forla</h3>
                 Новая&nbsp;коллекция
               </p>
             </div>
@@ -248,7 +251,7 @@
           <p class="entry">Последние экземпляры прошедшего сезона по&nbsp;выгодным ценам</p>
 
           <ul class="closeout">
-            <li>
+            <li class="gallery">
               <div class="stock-offer">
                 <p>
                   <span class="stock-procent">-50%</span>
@@ -292,7 +295,7 @@
               </ul>
             </li>
 
-            <li>
+            <li class="gallery">
               <ul class="collection">
                 <li>
                   <img src="img/model_4.png" width="179" height="231" alt="stock-4">
@@ -331,7 +334,7 @@
               <div class="stock-offer">
                 <p>
                   <span class="stock-procent">1+1=1</span>
-                  Вторая сумка от DELSON в подарок
+                  Вторая сумка от DELSON <span class="present">в подарок</span>
                 </p>
               </div>
             </li>
@@ -354,21 +357,21 @@
           <ul class="news">
             <li class="news-item">
               <img src="img/news_1.jpg" width="315" height="240" alt="news">
-              <span class="date">07.07.2017</span>
+              <time datetime="2017-07-07">07.07.2017</time>
               <h3>ЖЕНСКИЕ БРЕНДОВЫЕ СУМКИ-КЛАТЧИ</h3>
               <p>Выбирая женские брендовые клатчи стоит оценить все возможности и нюансы. А для начала уточнить...</p>
               <a href="#">Перейти к новости <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8"><path fill="#22222e" d="M.01 3.297h18.387c-.886-1.3-1.327-2.147-1.372-3.303 2.015 1.992 4.634 3.03 7.8 4.005-3.166.934-5.67 2.074-7.8 4.005.135-1.255.503-2.014 1.4-3.395H.01z"/></svg></a>
             </li>
             <li class="news-item">
               <img src="img/news_2.jpg" width="315" height="270" alt="news">
-              <span class="date">07.07.2017</span>
+              <time datetime="2017-07-07">07.07.2017</time>
               <h3>ЖЕНСКИЕ СУМКИ Baildinini</h3>
               <p>Один из самых именитых итальянских Домов моды представляет собственный взгляд на то, как именно...</p>
               <a href="#">Перейти к новости <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8"><path fill="#22222e" d="M.01 3.297h18.387c-.886-1.3-1.327-2.147-1.372-3.303 2.015 1.992 4.634 3.03 7.8 4.005-3.166.934-5.67 2.074-7.8 4.005.135-1.255.503-2.014 1.4-3.395H.01z"/></svg></a>
             </li>
             <li class="news-item">
               <img src="img/news_3.jpg" width="315" height="240" alt="news">
-              <span class="date">07.07.2017</span>
+              <time datetime="2017-07-07">07.07.2017</time>
               <h3>MITCHEL KORSO: как отличить от подделки</h3>
               <p>Бренд принадлежит легендарному американскому дизайнеру Майклу Корсу, которому за короткий срок удалось...</p>
               <a href="#">Перейти к новости <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8"><path fill="#22222e" d="M.01 3.297h18.387c-.886-1.3-1.327-2.147-1.372-3.303 2.015 1.992 4.634 3.03 7.8 4.005-3.166.934-5.67 2.074-7.8 4.005.135-1.255.503-2.014 1.4-3.395H.01z"/></svg></a>
@@ -385,7 +388,7 @@
               </form>
             </div>
             <span class="bonus-amount">500</span>
-            <span class="bonus">Бонусов на любую покупку</span>
+            <span class="bonus-offer"><span class="bonus">Бонусов</span> на&nbsp;любую&nbsp;покупку</span>
           </div>
         </section>
 
@@ -395,19 +398,19 @@
           <ul class="reviews slider">
             <li class="review-item">
               <div class="stars"><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span></div>
-              <p>Все очень понравилось!<br>Быстрое оформление заказа, выбор удобного времени доставки. Грамотные и отзывчивые операторы.<br>Всембольшое спасибо!</p>
+              <p>Все очень понравилось!Быстрое&nbsp;оформление заказа, выбор удобного времени доставки. Грамотные и отзывчивые операторы. Всембольшое&nbsp;спасибо!</p>
               <span class="author">Марина</span>
             </li>
 
             <li class="review-item">
               <div class="stars"><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span></div>
-              <p>Внимательные консультанты.Вежливые. Пункт самовывоза находится рядом с метро. Есть возможность примерки.<br>С примеркой не торопят. Советуют.</p>
+              <p>Внимательные консультанты.Вежливые. Пункт самовывоза находится рядом с&nbsp;метро. Есть возможность примерки. С&nbsp;примеркой не торопят. Советуют.</p>
               <span class="author">Светлана</span>
             </li>
 
             <li class="review-item">
               <div class="stars"><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span><span>&#xf005;</span></div>
-              <p>Удобный поиск, выбор на любой вкус и достаток, конкурентная цена, хорошие скидки, возможность оплаты покупки бонусами на 100 %, быстрая доставка.</p>
+              <p>Удобный поиск, выбор на любой вкус и&nbsp;достаток, конкурентная цена, хорошие скидки, возможность оплаты покупки бонусами на 100 %, быстрая доставка.</p>
               <span class="author">Ольга</span>
             </li>
           </ul>
