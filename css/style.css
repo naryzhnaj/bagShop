@@ -197,7 +197,6 @@ button {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   margin: 0;
   margin-top: 40px;
   margin-right: 255px;
@@ -205,8 +204,8 @@ button {
   padding: 0;
 }
 
-.male:first-child a,
-.female:first-child a {
+.male > a,
+.female > a {
   position: relative;
   color: #999;
   font-size: 18px;
@@ -214,21 +213,17 @@ button {
   outline: none;
 }
 
-.female:first-child:active,
-.female:first-child:hover,
-.female:first-child:focus,
-.male:first-child:active,
-.male:first-child:hover,
-.male:first-child:focus {
+.female:hover > a,
+.female > a:focus,
+.male:hover > a,
+.male > a:focus {
   color: #22222e;
 }
 
-.male:first-child:active::after,
-.male:first-child:hover::after,
-.male:first-child:focus::after,
-.female:first-child:active::after,
-.female:first-child:hover::after,
-.female:first-child:focus::after {
+.male:hover > a::after,
+.male > a:focus::after,
+.female:hover > a::after,
+.female > a:focus::after {
   position: absolute;
   bottom: 0;
   left: -10px;
@@ -239,8 +234,8 @@ button {
   background-color: #ad9c8c;
 }
 
-.male:hover .catalog,
-.female:hover .catalog{
+.male:hover .catalog-wrap,
+.female:hover .catalog-wrap {
   display: flex;
 }
 
@@ -294,19 +289,31 @@ button {
   border-radius: 50%;
 }
 
-.catalog {
+.catalog-wrap {
   display: none;
-  z-index: 9;
+  flex-direction: column;
   position: absolute;
   left: 0;
-  padding-top: 50px;
+  z-index: 9;
+  padding-top: 30px;
   height: 330px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 5px rgba(3, 5, 7, 0.1);
 }
 
-.catalog h3 {
+.catalog-header-wrap {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+
+.catalog-header {
+  display: flex;
+}
+
+.catalog-header h3 {
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 15px;
   line-height: 22px;
@@ -315,10 +322,12 @@ button {
   text-transform: uppercase;
   padding: 20px 0;
   margin: 0;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border-top: solid 1px #eee;
-  border-bottom: solid 1px #eee;
+  margin-right: 290px;
+}
+
+.catalog {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .catalog ul {
@@ -605,7 +614,7 @@ button {
   margin-bottom: 30px;
 }
 
-.gallery:nth-child(2) {
+.gallery:nth-child(2n) {
   flex-direction: row-reverse;
 }
 
@@ -650,7 +659,7 @@ button {
   padding: 0;
   background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
   width: 772px;
-  min-height: 445px;
+  min-height: 420px;
 }
 
 .collection li {
