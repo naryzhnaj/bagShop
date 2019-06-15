@@ -211,6 +211,8 @@ button {
   font-size: 18px;
   line-height: 36px;
   outline: none;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .female:hover > a,
@@ -304,6 +306,7 @@ button {
 
 .catalog-header-wrap {
   margin-bottom: 16px;
+  height: 60px;
   box-sizing: border-box;
   border-top: solid 1px #eee;
   border-bottom: solid 1px #eee;
@@ -463,7 +466,7 @@ button {
 .category-image a {
   position: absolute;
   bottom: 0;
-  right: -12px;
+  right: -6px;
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 15px;
   line-height: 60px;
@@ -653,7 +656,6 @@ button {
 .collection {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   align-items: flex-end;
   margin: 0;
   padding: 0;
@@ -668,6 +670,7 @@ button {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
+  width: 250px;
 }
 
 .buy {
@@ -678,6 +681,7 @@ button {
   font-weight: 700;
   line-height: 30px;
   margin-top: 30px;
+  margin-left: 59px;
 }
 
 .sum {
@@ -1002,7 +1006,7 @@ button {
   justify-content: space-between;
   width: 1000px;
   font-size: 16px;
-  line-height: 38px;
+  line-height: 30px;
   padding-bottom: 60px;
 }
 
@@ -1012,9 +1016,13 @@ button {
   margin: 0;
 }
 
+.main-footer li:first-child {
+  margin-bottom: 10px;
+}
+
 .main-footer a:not(.btn) {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 20px;
   text-decoration: underline;
   color: #22222e;
   opacity: 0.5;
@@ -1027,8 +1035,8 @@ button {
 
 .main-footer .btn {
   font-size: 14px;
-  margin-bottom: 11px;
-  padding: 8px 19px;
+  margin-top: 22px;
+  padding: 8px 23px;
 }
 
 .copyright {
