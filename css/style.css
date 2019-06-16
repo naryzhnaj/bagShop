@@ -656,20 +656,26 @@ button {
 .collection {
   list-style: none;
   display: flex;
-  align-items: flex-end;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
   width: 772px;
-  min-height: 420px;
+}
+
+.gallery:first-child .collection {
+  height: 395px;
+}
+
+.gallery:nth(2)-child .collection {
+  height: 410px;
 }
 
 .collection li {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  justify-content: flex-end;
+  padding: 0;
   width: 250px;
 }
 
@@ -734,6 +740,12 @@ button {
   width: 1170px;
 }
 
+.stock-offer {
+  width: 370px;
+  height: 445px;
+  box-sizing: border-box;
+}
+
 .gallery:first-child .stock-offer {
   background-image: url('../img/sale_layer_1.png');
 }
@@ -742,21 +754,15 @@ button {
   background-image: url('../img/sale_layer_2.png');
 }
 
-.stock-offer {
-  width: 370px;
-  height: 445px;
-  box-sizing: border-box;
-}
-
 .stock-offer p {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.72px;
   font-size: 24px;
   line-height: 36px;
+  box-sizing: border-box;
   background-color: #fff;
   margin: 15px;
   width: 340px;
@@ -764,7 +770,20 @@ button {
   opacity: 0.9;
 }
 
-.present {
+.gallery:first-child .stock-offer p {
+  padding-top: 159px;
+}
+
+.gallery:nth-child(2) .stock-offer p {
+  padding-top: 124px;
+}
+
+.present-1 {
+  font-size: 18px;
+  letter-spacing: 0.54px;
+}
+
+.present-2 {
   font-size: 46px;
   line-height: 48px;
 }
@@ -776,7 +795,7 @@ button {
   line-height: 60px;
   color: #d8c58d;
   letter-spacing: 3px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .brends {
