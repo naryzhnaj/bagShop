@@ -658,25 +658,34 @@ button {
   display: flex;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #f3f3f1 50%, #fff 50%);
+  background: linear-gradient(to bottom, #f3f3f1 230px, #fff 230px);
   width: 772px;
+  flex-grow: 1;
 }
 
 .gallery:first-child .collection {
+  padding-left: 10px;
+  margin-left: 30px;
   height: 395px;
 }
 
-.gallery:nth(2)-child .collection {
+.gallery:last-child .collection {
+  justify-content: flex-end;
+  padding-right: 10px;
+  margin-right: 30px;
   height: 410px;
 }
 
 .collection li {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
   padding: 0;
   width: 250px;
+}
+
+.collection img {
+  margin: 0 auto;
 }
 
 .buy {
@@ -754,7 +763,7 @@ button {
   background-image: url('../img/sale_layer_2.png');
 }
 
-.stock-offer p {
+.stock-offer-inner {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -770,32 +779,36 @@ button {
   opacity: 0.9;
 }
 
-.gallery:first-child .stock-offer p {
+.gallery:first-child .stock-offer-inner {
   padding-top: 159px;
 }
 
-.gallery:nth-child(2) .stock-offer p {
+.gallery:nth-child(2) .stock-offer-inner {
   padding-top: 124px;
 }
 
-.present-1 {
-  font-size: 18px;
-  letter-spacing: 0.54px;
-}
-
-.present-2 {
-  font-size: 46px;
-  line-height: 48px;
-}
-
-.stock-procent {
+.stock-offer-inner b {
   font-family: 'Yeseva One', Arial, sans-serif;
   font-size: 100px;
   font-weight: 400;
   line-height: 60px;
   color: #d8c58d;
   letter-spacing: 3px;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
+}
+
+.stock-offer-inner p {
+  margin: -7px 0 7px;
+}
+
+.stock-offer-small {
+  font-size: 18px;
+  letter-spacing: 0.54px;
+}
+
+.stock-offer-large {
+  font-size: 46px;
+  line-height: 48px;
 }
 
 .brends {
